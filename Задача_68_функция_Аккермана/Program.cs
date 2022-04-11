@@ -23,5 +23,5 @@ int FunctionsAkkerman(int numberM, int numberN)
     return functions;
 }
 
-int newFunctions = FunctionsAkkerman(3, 2);
+int newFunctions = FunctionsAkkerman(3, 10);
 Console.Write(newFunctions);
