@@ -12,16 +12,13 @@ int FunctionsAkkerman(int numberM, int numberN)
     {
         functions = numberN + 1;
     }
-    else
+    if (numberM > 0 && numberN == 0)
     {
-        if (numberM > 0 && numberN == 0)
-        {
-            FunctionsAkkerman(numberM - 1, 1);
-        }
-        if (numberM > 0 && numberN > 0)
-        {
-            FunctionsAkkerman(numberM - 1, FunctionsAkkerman(numberM, numberN - 1));
-        }
+        FunctionsAkkerman(numberM - 1, 1);
+    }
+    if (numberM > 0 && numberN > 0)
+    {
+        FunctionsAkkerman(numberM - 1, FunctionsAkkerman(numberM, numberN - 1));
     }
     return functions;
 }
